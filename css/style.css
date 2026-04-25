@@ -524,3 +524,26 @@ section { padding: clamp(3rem, 6vw, 5rem) 24px; }
   .hero-buttons { flex-direction: column; align-items: center; }
   .filter-btn { font-size: 0.78rem; padding: 5px 11px; }
 }
+
+/* ── FIRM BADGES ─────────────────────────────────────────────────────────── */
+.badge { display:inline-block; font-size:0.72rem; font-weight:700; padding:3px 9px; border-radius:20px; margin:2px 4px 2px 0; }
+.badge-green  { background:#d1fae5; color:#065f46; }
+.badge-blue   { background:#dbeafe; color:#1e40af; }
+.badge-verified { background:#fef3c7; color:#92400e; border:1px solid #fbbf24; }
+.badge-sla    { background:#ede9fe; color:#5b21b6; }
+.firm-header-row { display:flex; flex-wrap:wrap; align-items:flex-start; gap:8px; margin-bottom:4px; }
+.firm-header-row h3 { margin:0; flex:1; min-width:0; }
+.firm-badges  { display:flex; flex-wrap:wrap; gap:4px; }
+
+/* ── FIRM CARD FEATURED ──────────────────────────────────────────────────── */
+.firm-card--featured { border-color:#c9a84c !important; box-shadow:0 0 0 1px #c9a84c, var(--shadow-md) !important; }
+.firm-card--featured::before { content:'★ Featured'; position:absolute; top:0; right:0; background:#c9a84c; color:#fff; font-size:0.68rem; font-weight:700; letter-spacing:.06em; padding:3px 10px; border-radius:0 12px 0 8px; }
+.firm-card { position:relative; }
+
+/* ── RATINGS ─────────────────────────────────────────────────────────────── */
+.firm-rating { display:inline-flex; align-items:center; gap:5px; font-size:0.85rem; margin:4px 0 8px; text-decoration:none; color:inherit; }
+.firm-rating:hover { text-decoration:underline; }
+.stars-filled { color:#f59e0b; font-size:1rem; letter-spacing:1px; }
+.stars        { color:#f59e0b; letter-spacing:1px; }
+.review-count { color:#6b7280; font-size:0.8rem; }
+.firm-rating-empty { color:#6b7280; font-size:0.82rem; }
