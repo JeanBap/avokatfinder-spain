@@ -250,19 +250,36 @@ async function loadDashboard() {
 function initFilter() {
   const btns = document.querySelectorAll('.filter-btn');
   if (!btns.length) return;
+  // Ensure empty-state element exists
+  let emptyState = document.getElementById('filter-empty-state');
+  if (!emptyState) {
+    const grid = document.querySelector('.firms-grid');
+    if (grid) {
+      emptyState = document.createElement('div');
+      emptyState.id = 'filter-empty-state';
+      emptyState.style.cssText = 'display:none;grid-column:1/-1;text-align:center;padding:48px 24px;';
+      emptyState.innerHTML = '<div style="font-size:2.5rem;margin-bottom:12px">🔍</div><h3 style="margin-bottom:8px">No firms match this filter</h3><p style="color:#6b7280;margin-bottom:20px">Try a different practice area or use the lawyer wizard for personalised matches.</p><a href="/find-a-lawyer/" class="btn btn-primary">Use the Lawyer Wizard</a>';
+      grid.appendChild(emptyState);
+    }
+  }
   btns.forEach(btn => {
     btn.addEventListener('click', () => {
       btns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       const area = btn.dataset.area;
+      let visible = 0;
       document.querySelectorAll('.firm-card').forEach(card => {
         if (area === 'all') {
           card.style.display = '';
+          visible++;
         } else {
           const areas = (card.dataset.areas || '').split(',');
-          card.style.display = areas.includes(area) ? '' : 'none';
+          const show = areas.includes(area);
+          card.style.display = show ? '' : 'none';
+          if (show) visible++;
         }
       });
+      if (emptyState) emptyState.style.display = visible === 0 ? '' : 'none';
     });
   });
 }
