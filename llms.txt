@@ -12,26 +12,25 @@
 ## Legal Glossary Terms
 - https://spain.avokatfinder.com/glossary/ajd/
 - https://spain.avokatfinder.com/glossary/autonomo/
-- https://spain.avokatfinder.com/glossary/autonomo/
 - https://spain.avokatfinder.com/glossary/catastro/
 - https://spain.avokatfinder.com/glossary/certificado-energetico/
-- https://spain.avokatfinder.com/glossary/comunidad-de-propietarios/
-- https://spain.avokatfinder.com/glossary/contrato-arrendamiento/
 - https://spain.avokatfinder.com/glossary/empadronamiento/
-- https://spain.avokatfinder.com/glossary/escritura-publica/
 - https://spain.avokatfinder.com/glossary/escritura/
-- https://spain.avokatfinder.com/glossary/hipoteca-spain/
 - https://spain.avokatfinder.com/glossary/hipoteca/
 - https://spain.avokatfinder.com/glossary/ibi/
-- https://spain.avokatfinder.com/glossary/impuesto-transmisiones/
 - https://spain.avokatfinder.com/glossary/itp/
-- https://spain.avokatfinder.com/glossary/nie-number/
 - https://spain.avokatfinder.com/glossary/nie/
-- https://spain.avokatfinder.com/glossary/notaria-spain/
 - https://spain.avokatfinder.com/glossary/notario/
 - https://spain.avokatfinder.com/glossary/plusvalia/
 - https://spain.avokatfinder.com/glossary/poder-notarial/
 - https://spain.avokatfinder.com/glossary/tie/
+- https://spain.avokatfinder.com/glossary/comunidad-de-propietarios/
+- https://spain.avokatfinder.com/glossary/contrato-arrendamiento/
+- https://spain.avokatfinder.com/glossary/escritura-publica/
+- https://spain.avokatfinder.com/glossary/hipoteca-spain/
+- https://spain.avokatfinder.com/glossary/impuesto-transmisiones/
+- https://spain.avokatfinder.com/glossary/nie-number/
+- https://spain.avokatfinder.com/glossary/notaria-spain/
 
 ## Site Info
 - Language: English
