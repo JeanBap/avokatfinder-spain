@@ -1,5 +1,45 @@
 # AvökatFinder Spain
-> English-speaking law firm directory for Spain
+> The English-language directory of lawyers and law firms in Spain for expats, foreign nationals and international businesses.
 
-Directory: https://spain.avokatfinder.com
-Email: info@avokatfinder.com
+## Main Pages
+- https://spain.avokatfinder.com/: Home — find an English-speaking lawyer in Spain
+- https://spain.avokatfinder.com/lawyers/: Directory of verified law firms and lawyers in Spain
+- https://spain.avokatfinder.com/glossary/: Legal glossary — plain-English definitions of Spain legal terms
+- https://spain.avokatfinder.com/blog/: Expat legal guides and property law articles for Spain
+- https://spain.avokatfinder.com/about/: About AvökatFinder Spain
+- https://spain.avokatfinder.com/contact/: Contact us
+
+## Legal Glossary Terms
+- https://spain.avokatfinder.com/glossary/ajd/
+- https://spain.avokatfinder.com/glossary/autonomo/
+- https://spain.avokatfinder.com/glossary/autonomo/
+- https://spain.avokatfinder.com/glossary/catastro/
+- https://spain.avokatfinder.com/glossary/certificado-energetico/
+- https://spain.avokatfinder.com/glossary/comunidad-de-propietarios/
+- https://spain.avokatfinder.com/glossary/contrato-arrendamiento/
+- https://spain.avokatfinder.com/glossary/empadronamiento/
+- https://spain.avokatfinder.com/glossary/escritura-publica/
+- https://spain.avokatfinder.com/glossary/escritura/
+- https://spain.avokatfinder.com/glossary/hipoteca-spain/
+- https://spain.avokatfinder.com/glossary/hipoteca/
+- https://spain.avokatfinder.com/glossary/ibi/
+- https://spain.avokatfinder.com/glossary/impuesto-transmisiones/
+- https://spain.avokatfinder.com/glossary/itp/
+- https://spain.avokatfinder.com/glossary/nie-number/
+- https://spain.avokatfinder.com/glossary/nie/
+- https://spain.avokatfinder.com/glossary/notaria-spain/
+- https://spain.avokatfinder.com/glossary/notario/
+- https://spain.avokatfinder.com/glossary/plusvalia/
+- https://spain.avokatfinder.com/glossary/poder-notarial/
+- https://spain.avokatfinder.com/glossary/tie/
+
+## Site Info
+- Language: English
+- Audience: Expats, foreign nationals, international property buyers and businesses in Spain
+- Content: Law firm directory, legal glossary, expat legal guides
+- Last updated: 2026-04-30
+- Sitemap: https://spain.avokatfinder.com/sitemap.xml
+
+## Permissions
+User-agent: *
+Allow: /
