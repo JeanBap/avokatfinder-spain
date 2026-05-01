@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How to Choose a Lawyer in Spain — Decision Tree &amp; Professional Comparison | AvökatFinder</title>
+<meta name="description" content="Interactive decision tree: find the right Spanish legal professional for your matter. Compare abogado, notario, procurador, graduado social, and gestoría. Free tool.">
+<link rel="canonical" href="https://spain.avokatfinder.com/tools/how-to-choose-a-lawyer/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"How to Choose a Lawyer in Spain","url":"https://spain.avokatfinder.com/tools/how-to-choose-a-lawyer/","description":"Interactive decision tree to find the right Spanish legal professional: abogado, notario, procurador, graduado social, or gestoría.","breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"AvökatFinder Spain","item":"https://spain.avokatfinder.com/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://spain.avokatfinder.com/tools/"},{"@type":"ListItem","position":3,"name":"How to Choose a Lawyer","item":"https://spain.avokatfinder.com/tools/how-to-choose-a-lawyer/"}]},"mainEntity":{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do I need an abogado or a notario in Spain?","acceptedAnswer":{"@type":"Answer","text":"A notario in Spain is a public official who certifies documents (property deeds, company formation). An abogado (lawyer) provides legal advice and represents you in disputes. For property purchase you need both: a notario to sign the escritura, and an abogado to advise you through the process."}},{"@type":"Question","name":"What is a procurador in Spain?","acceptedAnswer":{"@type":"Answer","text":"A procurador is a court representative who formally files documents with the court on your behalf. In proceedings above €2,000 and certain court types, using a procurador is mandatory alongside your abogado. They do not provide legal advice — that is the abogado's role."}}]}}</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f5f5f5;color:#1a1a1a}
+header{background:#c60b1e;color:#fff;padding:1rem 1.5rem}
+header a{color:#fff;text-decoration:none;font-weight:700}
+.container{max-width:880px;margin:2rem auto;padding:0 1rem}
+h1{color:#1a1a2e;font-size:1.7rem;margin-bottom:0.5rem}
+.subtitle{color:#555;margin-bottom:1.5rem}
+.card{background:#fff;border-radius:10px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:1rem}
+.question{font-size:1.1rem;font-weight:700;color:#1a1a2e;margin-bottom:1rem}
+.options{display:flex;flex-direction:column;gap:0.6rem}
+.opt{padding:0.7rem 1rem;border:2px solid #ddd;border-radius:8px;cursor:pointer;font-size:0.95rem;transition:all .2s;background:#fff}
+.opt:hover{border-color:#c60b1e;background:#fff5f5}
+.result-card{background:#fff;border-radius:10px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.1);border-left:5px solid #c60b1e}
+.result-card h2{color:#c60b1e;margin-bottom:0.5rem}
+.result-card p{line-height:1.7;font-size:0.9rem;color:#333;margin-bottom:0.5rem}
+.tag{display:inline-block;background:#c60b1e;color:#fff;padding:0.2rem 0.6rem;border-radius:4px;font-size:0.78rem;margin-right:0.3rem;margin-bottom:0.3rem}
+.back-btn{background:#1a1a2e;color:#fff;border:none;padding:0.5rem 1.2rem;border-radius:6px;cursor:pointer;margin-top:1rem;font-size:0.9rem}
+.hidden{display:none}
+h2{color:#1a1a2e;margin-bottom:1rem;font-size:1.3rem}
+table.comp{width:100%;border-collapse:collapse;font-size:0.85rem;margin-top:0.5rem}
+table.comp th{background:#1a1a2e;color:#fff;padding:8px 10px;text-align:left}
+table.comp td{padding:7px 10px;border-bottom:1px solid #eee;vertical-align:top}
+table.comp tr:nth-child(even) td{background:#f8f8f8}
+footer{background:#111;color:#aaa;text-align:center;padding:1.2rem;font-size:0.8rem;margin-top:2rem}
+</style>
+</head>
+<body>
+<header>
+<a href="https://spain.avokatfinder.com/">AvökatFinder Spain</a> › <a href="/tools/" style="color:#fff">Tools</a> › Choose a Lawyer
+</header>
+<div class="container">
+<h1>How to Choose a Lawyer in Spain</h1>
+<p class="subtitle">Answer a few questions to find the right Spanish legal professional for your situation.</p>
+
+<div id="tree">
+<div class="card" id="q1">
+<div class="question">1. What best describes your legal matter?</div>
+<div class="options">
+<div class="opt" onclick="go('r-property')">🏠 Buying, selling, or renting property in Spain</div>
+<div class="opt" onclick="go('r-employment')">👔 Employment — dismissal, contract, salary dispute</div>
+<div class="opt" onclick="go('r-company')">🏢 Starting or running a company in Spain</div>
+<div class="opt" onclick="go('r-immigration')">✈️ Visa, NIE, residence permit, or nationality</div>
+<div class="opt" onclick="go('r-family')">👨‍👩‍👧 Divorce, separation, children, inheritance</div>
+<div class="opt" onclick="go('r-criminal')">⚖️ Criminal matter — police, accusation, defence</div>
+<div class="opt" onclick="go('r-debt')">💸 Debt recovery or commercial dispute</div>
+<div class="opt" onclick="go('r-tax')">🧾 Tax dispute, Agencia Tributaria, modelo 720</div>
+<div class="opt" onclick="go('r-ip')">💡 Intellectual property — trademark, patent, copyright</div>
+<div class="opt" onclick="go('r-notary')">📜 Notarial document — escritura, poderes, estatutos</div>
+</div>
+</div>
+</div>
+
+<div id="results" class="hidden">
+<!-- Results injected by JS -->
+<button class="back-btn" onclick="reset()">← Start Over</button>
+</div>
+
+<!-- COMPARISON TABLE -->
+<div class="card" style="margin-top:2rem">
+<h2>Spanish Legal Professionals — Comparison Matrix</h2>
+<table class="comp">
+<thead><tr><th>Professional</th><th>Role</th><th>Regulated by</th><th>Fee Basis</th><th>When to Use</th></tr></thead>
+<tbody>
+<tr>
+<td><strong>Abogado</strong></td>
+<td>Legal advice, representation in all courts and proceedings</td>
+<td>Colegio de Abogados (CGAE / bar association)</td>
+<td>Hourly (€100–350) or fixed. Baremo orientador only advisory.</td>
+<td>Any legal dispute, contract advice, immigration, criminal defence</td>
+</tr>
+<tr>
+<td><strong>Notario</strong></td>
+<td>Public official certifying legal acts — property deeds, company formation, powers of attorney</td>
+<td>Dirección General de Seguridad Jurídica y Fe Pública (Min. Justicia)</td>
+<td>Regulated arancel (RD 1426/1989) — no negotiation</td>
+<td>Property purchase, escrituras, company constitution, testamentos</td>
+</tr>
+<tr>
+<td><strong>Procurador</strong></td>
+<td>Court representative — files documents, receives notifications. No legal advice.</td>
+<td>Colegio de Procuradores (CGPE)</td>
+<td>Regulated arancel (RD 1373/2003)</td>
+<td>Mandatory in most court proceedings above €2,000; works alongside abogado</td>
+</tr>
+<tr>
+<td><strong>Graduado Social</strong></td>
+<td>Labour law specialist — Seguridad Social, employment contracts, ERTE, SEPE, Juzgado Social</td>
+<td>Colegio Oficial de Graduados Sociales</td>
+<td>Negotiated fees</td>
+<td>Employment law, Social Security disputes, payroll, ERE/ERTE</td>
+</tr>
+<tr>
+<td><strong>Gestoría</strong></td>
+<td>Administrative agent — tax filings, company registration, NIE applications, ITP/AJD payment</td>
+<td>Colegio de Gestores Administrativos (not all)</td>
+<td>Fixed fees (€200–1,500 depending on service)</td>
+<td>Routine admin: ITP/AJD, Hacienda filings, vehicle registration, NIE, TIE applications</td>
+</tr>
+<tr>
+<td><strong>Asesor Fiscal / Economista</strong></td>
+<td>Tax adviser and accountant</td>
+<td>Colegio de Economistas / Registro de Economistas Asesores Fiscales (REAF)</td>
+<td>Negotiated</td>
+<td>IRPF returns, IS, IVA, IRNR, Modelo 720, international tax planning</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+</div>
+<footer>
+<p>AvökatFinder Spain — Free legal guidance tools. Not legal advice. Always consult a qualified Spanish abogado.</p>
+</footer>
+
+<script>
+const results = {
+"r-property":{icon:"🏠",title:"Property — You Need an Abogado AND a Notario",body:`<p><strong>Abogado:</strong> Essential for due diligence — verifying nota simple (Registro de la Propiedad), checking for charges (cargas), drafting or reviewing the arras/compromiso de compraventa, and advising on ITP/AJD liability. An abogado is not legally mandatory but is strongly recommended for any non-Spanish buyer.</p>
+<p><strong>Notario:</strong> Mandatory for the escritura pública (purchase deed). The notario does NOT represent either party — they are a neutral public official. You may choose any notario in Spain.</p>
+<p><strong>Gestoría:</strong> Useful for post-completion administration — ITP payment at Hacienda, Registro de la Propiedad filing, utilities changes.</p>`,tags:["Abogado","Notario","Gestoría (optional)"],tip:"Get the nota simple first (Registro de la Propiedad, €9 online) — it shows all charges, owners, and encumbrances on the property."},
+"r-employment":{icon:"👔",title:"Employment — Abogado Laboralista or Graduado Social",body:`<p><strong>Abogado laboralista:</strong> Specialises in employment law. Essential for despido improcedente claims, discrimination, ERTE challenges, executive contracts.</p>
+<p><strong>Graduado Social:</strong> Can represent you at Juzgado de lo Social (labour court) AND before Seguridad Social and SEPE. Often cheaper than an abogado for routine employment matters.</p>
+<p><strong>Key deadline:</strong> Despido improcedente must be challenged at SMAC (conciliation) within <strong>20 working days</strong> of the dismissal letter (ET art. 59). Missing this deadline is fatal to the claim.</p>`,tags:["Abogado Laboralista","Graduado Social"],tip:"Request your carta de despido in writing — verbal dismissals are void. You have 20 working days from receipt to file at SMAC."},
+"r-company":{icon:"🏢",title:"Company Formation — Abogado Mercantilista + Notario + Gestoría",body:`<p><strong>SL telemática (CIRCE):</strong> Can be done yourself via CIRCE one-stop shop (2–5 days). Use standard estatutos provided by CIRCE to avoid notaría statutes drafting fee.</p>
+<p><strong>Notario:</strong> Mandatory for the escritura de constitución.</p>
+<p><strong>Abogado mercantilista:</strong> Needed for complex shareholders' agreements, Pacto de socios, non-standard statutes, foreign investor structures, or M&A.</p>
+<p><strong>Gestoría:</strong> Can handle Registro Mercantil filing, Agencia Tributaria registration, and Seguridad Social alta.</p>`,tags:["Notario","Gestoría","Abogado (if complex)"],tip:"Non-EU founders need a NIE before incorporating — apply at the Comisaría de Policía or Spanish consulate in your country."},
+"r-immigration":{icon:"✈️",title:"Immigration — Abogado Extranjería or Gestoría",body:`<p><strong>NIE only:</strong> A gestoría can handle it (€9.84 official fee + gestoría fees ~€100–300). Or do it yourself at the Comisaría de Policía/extranjería office.</p>
+<p><strong>TIE (tarjeta de identidad de extranjero):</strong> Non-EU nationals. Gestoría sufficient for straightforward cases.</p>
+<p><strong>Complex cases (Golden Visa, digital nomad visa, recurso de reposición after refusal):</strong> Abogado specialised in extranjería essential.</p>
+<p><strong>OQTF equivalent (expulsión, orden de expulsión):</strong> Abogado urgently — 48-hour challenge window in some cases.</p>`,tags:["Abogado Extranjería","Gestoría (for NIE/TIE)"],tip:"Always verify your extranjería abogado is registered with a Colegio de Abogados — check at cgae.es."},
+"r-family":{icon:"👨‍👩‍👧",title:"Family Law — Abogado de Familia",body:`<p><strong>Divorce mutuo acuerdo (uncontested):</strong> Both spouses need their own abogado. The convenio regulador (financial settlement) must be signed before a notario (since loi 2015) — no court needed if no minor children affected. With minor children: Juzgado de Familia ratification required.</p>
+<p><strong>Divorce contencioso (contested):</strong> Abogado AND procurador mandatory.</p>
+<p><strong>Inheritance (herencia):</strong> Notario for acceptance and partition deed (escritura de aceptación de herencia). Abogado if disputed.</p>`,tags:["Abogado de Familia","Notario","Procurador (contested)"],tip:"Impuesto de Sucesiones y Donaciones: tax on inheritance varies wildly by CCAA — Madrid is almost 0% for direct relatives; Cataluña up to 32%. File the tax within 6 months of death."},
+"r-criminal":{icon:"⚖️",title:"Criminal Defence — Abogado Penalista",body:`<p><strong>At police station:</strong> Request an abogado de guardia (duty lawyer) immediately — it is your right. Do not answer police questions without an abogado present.</p>
+<p><strong>Private penalista:</strong> Essential for anything beyond a minor contravención. For serious matters, choose an abogado specialised in derecho penal — the generalist down the road is not enough.</p>
+<p><strong>Turno de oficio (legal aid):</strong> Available if income below legal aid threshold. Apply at the Colegio de Abogados — free service for qualifying applicants.</p>`,tags:["Abogado Penalista","Procurador (mandatory at Audiencia)"],tip:"Exercise your right to silence (derecho a no declarar contra uno mismo — CE art. 24.2). You cannot be penalised for remaining silent."},
+"r-debt":{icon:"💸",title:"Debt Recovery — Abogado + Proceso Monitorio",body:`<p><strong>Proceso monitorio (LEC art. 812):</strong> For documented debts of any amount — file at Juzgado de Primera Instancia. No abogado needed below €2,000. Debtor has 20 days to oppose — if no opposition, order becomes enforceable automatically.</p>
+<p><strong>Juicio verbal:</strong> Claims €2,001–€15,000. Abogado optional below €2,000 in dispute, mandatory above.</p>
+<p><strong>Juicio ordinario:</strong> Claims above €15,000. Abogado AND procurador mandatory.</p>`,tags:["Abogado","Procurador (if >€2,000)"],tip:"Send a burofax (certified letter via Correos) before filing — it puts the debtor in mora under CC art. 1100 and triggers commercial interest under Ley 3/2004 (ECB + 8pp)."},
+"r-tax":{icon:"🧾",title:"Tax Disputes — Asesor Fiscal / Abogado Tributarista",body:`<p><strong>AEAT (Agencia Tributaria) inspection or letter:</strong> An asesor fiscal or gestoría can handle most responses to AEAT. For significant amounts, use an abogado tributarista.</p>
+<p><strong>Recurso de reposición / reclamación económico-administrativa (TEAC/TEA):</strong> Abogado tributarista recommended. Free administrative stage — mandatory before going to court.</p>
+<p><strong>Modelo 720 (overseas assets):</strong> Asesor fiscal. Penalties for late/incorrect filing: €1,500 minimum per item late, €10,000 minimum per item omitted.</p>`,tags:["Asesor Fiscal","Abogado Tributarista"],tip:"Recurso de reposición: 1 month from AEAT decision to file. Reclamación económico-administrativa: 1 month from AEAT decision. These deadlines are strict — do not miss them."},
+"r-ip":{icon:"💡",title:"Intellectual Property — Abogado IP / Agente de Propiedad Industrial",body:`<p><strong>Trademark / patent registration (OEPM):</strong> An Agente de la Propiedad Industrial (API) — a registered specialist — handles OEPM filings. Not an abogado but a licensed professional for IP registration.</p>
+<p><strong>Infringement litigation:</strong> Abogado specialised in propiedad intelectual / industrial. IP cases go to Juzgados Mercantiles (which have specialist IP chambers in Barcelona and Madrid).</p>`,tags:["Agente de Propiedad Industrial","Abogado IP","Procurador"],tip:"Register your marca at OEPM (€146 one class) before using it publicly. Check the OEPM database first — search at oepm.es/en (free)."},
+"r-notary":{icon:"📜",title:"Notarial Document — Go Directly to a Notario",body:`<p>For pure notarial acts (poderes notariales, escrituras, testamentos, estatutos de SL, capitulaciones matrimoniales, actas notariales), go directly to a notario. No abogado needed for the notarial act itself.</p>
+<p>You can choose any notario in Spain — they all charge the same regulated arancel. Find one via: <strong>notariado.org</strong> (official search).</p>
+<p>For powers of attorney for foreigners: bring your passport + NIE, and arrange a certified translator if you are not fluent in Spanish.</p>`,tags:["Notario only"],tip:"Need a power of attorney quickly? Many notarías offer citas (appointments) within 24–48 hours. For urgent apostilles, contact the Tribunal Superior de Justicia in the relevant CCAA."}
+};
+
+function go(id){
+  document.getElementById('tree').classList.add('hidden');
+  const r=results[id];
+  let html=`<div class="result-card"><div style="font-size:2rem;margin-bottom:0.5rem">${r.icon}</div><h2>${r.title}</h2>${r.body}`;
+  if(r.tags){html+=`<div style="margin-top:0.8rem">`;r.tags.forEach(t=>html+=`<span class="tag">${t}</span>`);html+=`</div>`;}
+  if(r.tip){html+=`<div style="background:#e8f4fd;border-left:3px solid #1a1a2e;padding:0.6rem 0.8rem;margin-top:0.8rem;font-size:0.85rem"><strong>💡 Tip:</strong> ${r.tip}</div>`;}
+  html+=`</div>`;
+  document.getElementById('results').innerHTML=html+`<button class="back-btn" onclick="reset()">← Start Over</button>`;
+  document.getElementById('results').classList.remove('hidden');
+}
+function reset(){
+  document.getElementById('tree').classList.remove('hidden');
+  document.getElementById('results').classList.add('hidden');
+  document.getElementById('results').innerHTML='';
+}
+</script>
+</body>
+</html>
