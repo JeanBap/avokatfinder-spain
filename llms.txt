@@ -37,11 +37,18 @@
 - https://spain.avokatfinder.com/glossary/nie-number/
 - https://spain.avokatfinder.com/glossary/notaria-spain/
 
+
+## Interactive Legal Tools
+- https://spain.avokatfinder.com/tools/: Legal tools hub — calculators, templates, decision trees for Spain
+- https://spain.avokatfinder.com/tools/legal-cost-calculator/: Spanish legal cost calculator — ITP/AJD by CCAA, notaría fees, SL/SA formation, Golden Visa thresholds, abogado estimates
+- https://spain.avokatfinder.com/tools/legal-templates/: Free bilingual ES/EN legal templates — NDA (Ley 1/2019 secretos empresariales), hoja de encargo (EGAE/RD 135/2021), burofax/carta de requerimiento
+- https://spain.avokatfinder.com/tools/how-to-choose-a-lawyer/: Lawyer selection decision tree — abogado vs notario vs procurador vs gestoría comparison for Spain
+
 ## Site Info
 - Language: English
 - Audience: Expats, foreign nationals, international property buyers and businesses in Spain
 - Content: Law firm directory, legal glossary, expat legal guides
-- Last updated: 2026-04-30
+- Last updated: 2026-05-01
 - Sitemap: https://spain.avokatfinder.com/sitemap.xml
 
 ## Permissions
