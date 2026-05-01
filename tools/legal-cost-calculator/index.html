@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Spanish Legal Cost Calculator — ITP/AJD by CCAA, Notaría Fees, SL Formation | AvökatFinder Spain</title>
+<meta name="description" content="Calculate Spanish property transfer tax (ITP) by autonomous community, AJD stamp duty, notaría fees, SL/SA formation costs, and Golden Visa thresholds. Free tool for expats in Spain 2025.">
+<link rel="canonical" href="https://spain.avokatfinder.com/tools/legal-cost-calculator/">
+<meta property="og:title" content="Spanish Legal Cost Calculator — ITP/AJD by CCAA">
+<meta property="og:description" content="Calculate ITP, AJD, notaría fees, Golden Visa thresholds, SL/SA formation. Free tool for expats in Spain.">
+<meta property="og:url" content="https://spain.avokatfinder.com/tools/legal-cost-calculator/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Spanish Legal Cost Calculator","url":"https://spain.avokatfinder.com/tools/legal-cost-calculator/","description":"Free calculator for ITP/AJD property taxes by CCAA, notaría fees, Golden Visa thresholds, and SL/SA formation costs in Spain.","breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"AvökatFinder Spain","item":"https://spain.avokatfinder.com/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://spain.avokatfinder.com/tools/"},{"@type":"ListItem","position":3,"name":"Legal Cost Calculator","item":"https://spain.avokatfinder.com/tools/legal-cost-calculator/"}]},"mainEntity":{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is ITP in Spain?","acceptedAnswer":{"@type":"Answer","text":"ITP (Impuesto de Transmisiones Patrimoniales) is the property transfer tax paid when buying resale property in Spain. Rates vary by autonomous community (CCAA) from 6% in Madrid to 11% in Extremadura and parts of Catalonia."}},{"@type":"Question","name":"What is AJD in Spain?","acceptedAnswer":{"@type":"Answer","text":"AJD (Actos Jurídicos Documentados) is a stamp duty on notarised documents — primarily mortgages and new-build purchases. Rates range from 0.5% to 2.5% by CCAA. Since 2018, banks pay AJD on mortgages (RDL 17/2018)."}}]}}</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f5f5f5;color:#1a1a1a}
+header{background:#c60b1e;color:#fff;padding:1rem 1.5rem}
+header a{color:#fff;text-decoration:none;font-weight:700}
+.container{max-width:960px;margin:2rem auto;padding:0 1rem}
+h1{color:#1a1a2e;font-size:1.7rem;margin-bottom:0.5rem}
+.subtitle{color:#555;margin-bottom:1.5rem;font-size:0.95rem}
+.tabs{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.5rem}
+.tab{padding:0.5rem 1.1rem;border:2px solid #c60b1e;background:#fff;color:#c60b1e;border-radius:6px;cursor:pointer;font-size:0.9rem;font-weight:600}
+.tab.active{background:#c60b1e;color:#fff}
+.panel{display:none;background:#fff;border-radius:10px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.panel.active{display:block}
+label{display:block;font-weight:600;margin-bottom:0.3rem;font-size:0.9rem}
+select,input[type=number]{width:100%;padding:0.6rem 0.8rem;border:1px solid #ccc;border-radius:6px;font-size:1rem;margin-bottom:1rem}
+.calc-btn{background:#c60b1e;color:#fff;border:none;padding:0.7rem 1.5rem;border-radius:6px;font-size:1rem;cursor:pointer;font-weight:600}
+.result{margin-top:1rem;background:#f0f4ff;border-radius:8px;padding:1rem}
+.result table{width:100%;border-collapse:collapse;font-size:0.9rem}
+.result td{padding:5px 8px;border-bottom:1px solid #ddd}
+.result tr:last-child td{border-bottom:none;font-weight:700;background:#e0e8ff;padding:8px}
+.info-box{background:#fff8e8;border-left:4px solid #e6a817;padding:0.8rem 1rem;margin-top:1rem;border-radius:4px;font-size:0.85rem}
+h2{color:#1a1a2e;margin-bottom:1rem;font-size:1.2rem}
+table.ref{width:100%;border-collapse:collapse;font-size:0.85rem;margin-top:0.5rem}
+table.ref th{background:#1a1a2e;color:#fff;padding:7px 10px;text-align:left}
+table.ref td{padding:6px 10px;border-bottom:1px solid #eee}
+table.ref tr:nth-child(even) td{background:#f8f8f8}
+footer{background:#111;color:#aaa;text-align:center;padding:1.2rem;font-size:0.8rem;margin-top:2rem}
+</style>
+</head>
+<body>
+<header>
+<a href="https://spain.avokatfinder.com/">AvökatFinder Spain</a> › <a href="/tools/" style="color:#fff">Tools</a> › Cost Calculator
+</header>
+<div class="container">
+<h1>Spanish Legal Cost Calculator</h1>
+<p class="subtitle">ITP/AJD by autonomous community · Notaría fees · SL/SA formation · Golden Visa · Abogado estimates</p>
+
+<div class="tabs">
+<div class="tab active" onclick="showTab('prop')">🏠 Property Purchase</div>
+<div class="tab" onclick="showTab('company')">🏢 Company Formation</div>
+<div class="tab" onclick="showTab('golden')">🌟 Golden Visa</div>
+<div class="tab" onclick="showTab('abogado')">⚖️ Abogado Fees</div>
+</div>
+
+<!-- PROPERTY TAB -->
+<div class="panel active" id="panel-prop">
+<h2>Property Purchase — ITP/AJD Calculator</h2>
+<label>Autonomous Community (CCAA)</label>
+<select id="ccaa">
+<option value="6">Andalucía (7%)</option>
+<option value="4">Aragón (8%)</option>
+<option value="8">Asturias (8%)</option>
+<option value="9">Baleares (8–13% progressive)</option>
+<option value="11">Canarias (6.5%)</option>
+<option value="10">Cantabria (10%)</option>
+<option value="6" data-name="Castilla-La Mancha">Castilla-La Mancha (6%)</option>
+<option value="8" data-name="Castilla y León">Castilla y León (8%)</option>
+<option value="10" data-name="Cataluña">Cataluña (10% std / 11% above €1M)</option>
+<option value="6" data-name="Comunidad Valenciana">Comunidad Valenciana (10%)</option>
+<option value="11" data-name="Extremadura">Extremadura (11%)</option>
+<option value="10" data-name="Galicia">Galicia (10%)</option>
+<option value="6" selected data-name="Madrid">Madrid (6%)</option>
+<option value="8" data-name="Murcia">Murcia (8%)</option>
+<option value="6" data-name="Navarra">Navarra (6%)</option>
+<option value="7" data-name="La Rioja">La Rioja (7%)</option>
+<option value="7" data-name="País Vasco">País Vasco (7%)</option>
+</select>
+<label>Purchase Price (€)</label>
+<input type="number" id="prop-price" value="350000" min="1000" step="1000">
+<label>Property Type</label>
+<select id="prop-type">
+<option value="resale">Resale / Second-hand (ITP applies)</option>
+<option value="new">New build from developer (IVA + AJD applies)</option>
+</select>
+<label>Include Mortgage?</label>
+<select id="prop-mortgage">
+<option value="no">No mortgage</option>
+<option value="yes">Yes — AJD on mortgage (paid by bank since RDL 17/2018)</option>
+</select>
+<button class="calc-btn" onclick="calcProp()">Calculate Costs</button>
+<div class="result" id="prop-result" style="display:none"></div>
+<div class="info-box">
+<strong>Note:</strong> Since RDL 17/2018, banks pay AJD on mortgages — buyers no longer pay. 
+Plusvalía municipal (IIVTNU) is also payable on resale — vendor pays, not buyer. 
+ITP rates shown are general rates; reduced rates apply for large families, under-35s, and disabled buyers in most CCAA.
+</div>
+
+<h2 style="margin-top:1.5rem;">ITP Rates by CCAA — 2025 Reference Table</h2>
+<table class="ref">
+<thead><tr><th>CCAA</th><th>General ITP Rate</th><th>On €300k</th><th>On €500k</th></tr></thead>
+<tbody>
+<tr><td><strong>Madrid</strong></td><td>6%</td><td>€18,000</td><td>€30,000</td></tr>
+<tr><td><strong>Canarias</strong></td><td>6.5%</td><td>€19,500</td><td>€32,500</td></tr>
+<tr><td><strong>Castilla-La Mancha / Navarra</strong></td><td>6%</td><td>€18,000</td><td>€30,000</td></tr>
+<tr><td><strong>La Rioja / País Vasco</strong></td><td>7%</td><td>€21,000</td><td>€35,000</td></tr>
+<tr><td><strong>Andalucía</strong></td><td>7%</td><td>€21,000</td><td>€35,000</td></tr>
+<tr><td><strong>Aragón / Castilla y León / Murcia / Asturias</strong></td><td>8%</td><td>€24,000</td><td>€40,000</td></tr>
+<tr><td><strong>Baleares</strong></td><td>8% (≤€400k) / 9% / 10% / 12%</td><td>€24,000</td><td>€50,000+</td></tr>
+<tr><td><strong>Cataluña</strong></td><td>10% (11% above €1M)</td><td>€30,000</td><td>€50,000</td></tr>
+<tr><td><strong>Comunidad Valenciana / Galicia / Cantabria</strong></td><td>10%</td><td>€30,000</td><td>€50,000</td></tr>
+<tr><td><strong>Extremadura</strong></td><td>11%</td><td>€33,000</td><td>€55,000</td></tr>
+</tbody>
+</table>
+</div>
+
+<!-- COMPANY TAB -->
+<div class="panel" id="panel-company">
+<h2>Company Formation — SL vs SA vs Autónomo</h2>
+<label>Company Type</label>
+<select id="co-type">
+<option value="sl">Sociedad Limitada (SL)</option>
+<option value="slunipersonal">SL Unipersonal (SLU)</option>
+<option value="sa">Sociedad Anónima (SA)</option>
+<option value="autonomo">Autónomo (Sole Trader)</option>
+</select>
+<label>Share Capital (€) — for SL/SA only</label>
+<input type="number" id="co-capital" value="3000" min="1" step="100">
+<button class="calc-btn" onclick="calcCompany()">Calculate Formation Cost</button>
+<div class="result" id="company-result" style="display:none"></div>
+<div class="info-box">
+<strong>SL since 2022 (Ley Crea y Crece, Ley 18/2022):</strong> Capital minimum remains €3,000 but 
+25% can be deferred for 5 years. Telemática formation via CIRCE (online one-stop shop) available for 
+SL with standard statutes — typically 2–5 business days.
+</div>
+</div>
+
+<!-- GOLDEN VISA TAB -->
+<div class="panel" id="panel-golden">
+<h2>Spanish Golden Visa — Investment Thresholds</h2>
+<p style="margin-bottom:1rem;font-size:0.9rem;">Spain's Golden Visa (investor residence permit — Ley 14/2013, art. 63 et seq.) grants a 2-year initial residence permit (renewable to 5 years) to non-EU nationals making qualifying investments.</p>
+<table class="ref" style="margin-top:0.5rem">
+<thead><tr><th>Investment Type</th><th>Min. Amount</th><th>Permit Duration</th></tr></thead>
+<tbody>
+<tr><td><strong>Real estate purchase</strong></td><td><strong>€500,000</strong> (free of charges/mortgages)</td><td>2 years initial → 5 year renewal</td></tr>
+<tr><td>Spanish public debt (Deuda del Estado)</td><td>€2,000,000</td><td>2 years → 5 years</td></tr>
+<tr><td>Shares in Spanish companies (unlisted)</td><td>€1,000,000</td><td>2 years → 5 years</td></tr>
+<tr><td>Investment funds / venture capital</td><td>€1,000,000</td><td>2 years → 5 years</td></tr>
+<tr><td>Bank deposit in Spanish institution</td><td>€1,000,000</td><td>2 years → 5 years</td></tr>
+<tr><td><strong>Startup Act — Digital nomad visa (Ley 28/2022)</strong></td><td>Remote income from non-Spanish companies</td><td>1 year → 3 year renewal</td></tr>
+</tbody>
+</table>
+<div class="info-box" style="margin-top:1rem">
+<strong>⚠️ Status Update:</strong> In April 2024, the Spanish government announced its intention to abolish the 
+real estate Golden Visa route. As of May 2025, legislative abolition has not been completed — 
+the real estate route is technically still available but facing political uncertainty. 
+Verify current status with a Spanish immigration abogado before proceeding.
+</div>
+<div class="info-box" style="margin-top:0.5rem;background:#e8f8e8;border-color:#2ecc71">
+<strong>Régimen Fiscal Especial — "Ley Beckham" (LISR art. 93, now Startup Act 2022):</strong> 
+Non-residents taking up Spanish tax residence for qualifying work may pay IRNR flat rate 
+(24% on income up to €600,000 instead of progressive IRPF up to 47%) for 6 years. 
+Available to employees and self-employed under Ley 28/2022.
+</div>
+</div>
+
+<!-- ABOGADO FEES TAB -->
+<div class="panel" id="panel-abogado">
+<h2>Abogado Fee Estimates — Spain 2025</h2>
+<label>Matter Type</label>
+<select id="abo-type" onchange="showAbogado()">
+<option value="property">Property purchase (conveyancing)</option>
+<option value="employment">Employment / Despido improcedente</option>
+<option value="divorce">Divorce / Separation</option>
+<option value="company">Company formation / Corporate</option>
+<option value="immigration">Immigration / NIE / Visa</option>
+<option value="criminal">Criminal defence</option>
+</select>
+<div id="abo-result" style="margin-top:1rem"></div>
+<div class="info-box">
+<strong>Baremo orientador:</strong> Spanish bar associations (Colegios de Abogados) publish recommended 
+fee scales (baremos orientadores). These are advisory only since EU competition law requires them to 
+be non-binding (STS 12 May 2020 confirmed). Hourly rates: €100–350/hour depending on city and speciality. 
+Madrid and Barcelona abogados typically 30–50% higher than provincial rates.
+</div>
+</div>
+
+</div><!-- .container -->
+<footer>
+<p>AvökatFinder Spain — Free legal cost estimates. Not legal advice. Verify all fees with your abogado or notario. Data current as of 2025.</p>
+</footer>
+
+<script>
+function showTab(t){
+  document.querySelectorAll('.tab').forEach((el,i)=>{el.classList.remove('active')});
+  document.querySelectorAll('.panel').forEach(el=>el.classList.remove('active'));
+  document.getElementById('panel-'+t).classList.add('active');
+  event.target.classList.add('active');
+}
+
+// Notaría fee estimator (Arancel notarial RD 1426/1989, approximate)
+function notariaFee(price){
+  let fee=0;
+  const tranches=[[6010,90],[30051,444],[60101,359],[150253,600],[601013,1009]];
+  let remaining=price, prev=0;
+  const limits=[6010,30051,60101,150253,601013];
+  const rates=[0.0300,0.0150,0.0090,0.0060,0.0030,0.0015];
+  let i=0;
+  while(remaining>0 && i<limits.length){
+    const band=limits[i]-(i>0?limits[i-1]:0);
+    const chunk=Math.min(remaining,band);
+    fee+=chunk*rates[i];
+    remaining-=chunk;
+    i++;
+  }
+  if(remaining>0) fee+=remaining*rates[5];
+  return Math.round(fee*1.21); // +IVA 21%
+}
+
+function calcProp(){
+  const price=parseFloat(document.getElementById('prop-price').value)||0;
+  const sel=document.getElementById('ccaa');
+  const rate=parseFloat(sel.value)/100;
+  const type=document.getElementById('prop-type').value;
+  const el=document.getElementById('prop-result');
+  let rows='';
+  let total=0;
+  
+  if(type==='resale'){
+    const itp=price*rate;
+    const notar=notariaFee(price);
+    const regprop=Math.round(price*0.0025+100); // approx registro propiedad
+    const gestor=300;
+    total=itp+notar+regprop+gestor;
+    const pct=(total/price*100).toFixed(1);
+    rows=`<tr><td>ITP (${(rate*100).toFixed(1)}% — selected CCAA)</td><td>€${itp.toLocaleString('en-GB',{maximumFractionDigits:0})}</td></tr>
+<tr><td>Notaría fees (Arancel RD 1426/1989 + IVA 21%)</td><td>€${notar.toLocaleString('en-GB',{maximumFractionDigits:0})}</td></tr>
+<tr><td>Registro de la Propiedad (approx.)</td><td>€${regprop.toLocaleString('en-GB',{maximumFractionDigits:0})}</td></tr>
+<tr><td>Gestoría / abogado (conveyancing)</td><td>~€${gestor.toLocaleString('en-GB',{maximumFractionDigits:0})}</td></tr>
+<tr><td><strong>TOTAL acquisition costs (${pct}%)</strong></td><td><strong>≈ €${total.toLocaleString('en-GB',{maximumFractionDigits:0})}</strong></td></tr>`;
+  } else {
+    const iva=price*0.10; // IVA 10% new housing
+    const ajd=price*0.015; // AJD avg ~1.5% on new builds (varies by CCAA)
+    const notar=notariaFee(price);
+    const regprop=Math.round(price*0.0025+100);
+    total=iva+ajd+notar+regprop;
+    const pct=(total/price*100).toFixed(1);
+    rows=`<tr><td>IVA (10% new housing — Art. 91 LIVA)</td><td>€${iva.toLocaleString('en-GB',{maximumFractionDigits:0})}</td></tr>
+<tr><td>AJD stamp duty (avg 1.5% — varies by CCAA)</td><td>€${ajd.toLocaleString('en-GB',{maximumFractionDigits:0})}</td></tr>
+<tr><td>Notaría fees + IVA</td><td>€${notar.toLocaleString('en-GB',{maximumFractionDigits:0})}</td></tr>
+<tr><td>Registro de la Propiedad</td><td>€${regprop.toLocaleString('en-GB',{maximumFractionDigits:0})}</td></tr>
+<tr><td><strong>TOTAL acquisition costs (${pct}%)</strong></td><td><strong>≈ €${total.toLocaleString('en-GB',{maximumFractionDigits:0})}</strong></td></tr>`;
+  }
+  el.style.display='block';
+  el.innerHTML=`<h3 style="margin-bottom:0.5rem;font-size:1rem;">Results for €${price.toLocaleString('en-GB',{maximumFractionDigits:0})} — ${type==='resale'?'Resale':'New Build'}</h3><table>${rows}</table>`;
+}
+
+function calcCompany(){
+  const type=document.getElementById('co-type').value;
+  const capital=parseFloat(document.getElementById('co-capital').value)||3000;
+  const el=document.getElementById('company-result');
+  let rows='';
+  if(type==='sl'||type==='slunipersonal'){
+    rows=`<tr><td>Share capital (minimum €3,000 — Ley Crea y Crece 2022)</td><td>€${Math.max(capital,3000).toLocaleString()}</td></tr>
+<tr><td>Notaría (escritura de constitución)</td><td>€150–400</td></tr>
+<tr><td>Registro Mercantil</td><td>€40–80</td></tr>
+<tr><td>CIRCE / PAE (online one-stop — telemática route)</td><td>€0 extra</td></tr>
+<tr><td>Abogado / gestoría (statutes drafting)</td><td>€300–1,500</td></tr>
+<tr><td>Tax registration (Agencia Tributaria, AEAT)</td><td>Free</td></tr>
+<tr><td>Social Security (RETA) — autónomo / director</td><td>€230–460/month</td></tr>
+<tr><td><strong>Total formation cost (excl. capital)</strong></td><td><strong>€490–2,000</strong></td></tr>`;
+  } else if(type==='sa'){
+    rows=`<tr><td>Share capital (minimum €60,000 — 25% paid up)</td><td>€${Math.max(capital,60000).toLocaleString()}</td></tr>
+<tr><td>Notaría (escritura)</td><td>€400–900</td></tr>
+<tr><td>Registro Mercantil</td><td>€150–300</td></tr>
+<tr><td>Abogado / asesoría</td><td>€1,000–3,000</td></tr>
+<tr><td><strong>Total formation cost (excl. capital)</strong></td><td><strong>€1,550–4,200</strong></td></tr>`;
+  } else {
+    rows=`<tr><td>Alta en Hacienda (Agencia Tributaria)</td><td>Free</td></tr>
+<tr><td>Alta en Seguridad Social (RETA)</td><td>€230–460/month (cuota autónomo)</td></tr>
+<tr><td>Gestoría (annual)</td><td>€800–2,400/year</td></tr>
+<tr><td>No share capital required</td><td>€0</td></tr>
+<tr><td><strong>Total setup cost</strong></td><td><strong>€0 registration (RETA from month 1)</strong></td></tr>`;
+  }
+  el.style.display='block';
+  el.innerHTML=`<table>${rows}</table>`;
+}
+
+const abogadoData={
+  property:{title:'Property Conveyancing',rows:[['Draft review / search (NIE, nota simple, cargas)','€300–800'],['Full conveyancing (compromiso to escritura)','€1,000–3,000'],['Post-completion (registro, ITP filing, utilities)','€200–500'],['<strong>Total abogado cost (on €300k purchase)</strong>','<strong>€1,000–3,500</strong>']]},
+  employment:{title:'Despido Improcedente / Employment Dispute',rows:[['Initial consultation + opinion letter','€150–400'],['Pre-conciliation (SMAC / UMAC)','€300–800'],['Juzgado de lo Social hearing','€1,500–4,000'],['Recurso de suplicación (TSJ appeal)','€2,000–6,000'],['<strong>Full case estimate</strong>','<strong>€2,000–6,000</strong>']]},
+  divorce:{title:'Divorce / Separation',rows:[['Uncontested divorce (mutuo acuerdo)','€600–2,000'],['Contested divorce (contencioso)','€2,000–8,000'],['Children / custody proceedings (additional)','€1,000–4,000'],['<strong>Notaría (convenio regulador)</strong>','<strong>€30–200</strong>']]},
+  company:{title:'Company Formation / Corporate',rows:[['SL telemática (CIRCE) with standard statutes','€300–800'],['SL custom statutes + abogado','€800–2,500'],['SA formation','€1,500–5,000'],['Annual compliance (annual accounts + tax returns)','€1,200–4,000/yr']]},
+  immigration:{title:'NIE / Visa / Residence Permit',rows:[['NIE application (número de identificación extranjero)','€9.84 (Tasa 790)'],['TIE card (non-EU residence card)','€16 (Tasa 790)'],['Abogado: visa/TIE full service','€500–1,500'],['Golden Visa application (Ley 14/2013)','€500–3,000 (abogado)']]},
+  criminal:{title:'Criminal Defence',rows:[['Guardia civil / police station (duty solicitor)','Free (turno de oficio)'],['Private abogado — preliminary hearing','€500–1,500'],['Juzgado de lo Penal trial (delito)','€2,000–8,000'],['Audiencia Provincial trial (delito grave)','€5,000–20,000+']]}
+};
+
+function showAbogado(){
+  const type=document.getElementById('abo-type').value;
+  const d=abogadoData[type];
+  let html=`<h3 style="margin-bottom:0.5rem;font-size:1rem;">${d.title}</h3><table class="ref" style="margin:0"><thead><tr><th>Item</th><th>Estimated Cost</th></tr></thead><tbody>`;
+  d.rows.forEach(r=>html+=`<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`);
+  html+='</tbody></table>';
+  document.getElementById('abo-result').innerHTML=html;
+}
+showAbogado();
+</script>
+</body>
+</html>
